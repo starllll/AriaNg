@@ -13,6 +13,7 @@
         defaultLanguage: 'en',
         defaultHost: 'localhost',
         defaultSecureProtocol: 'https',
+        defaultPort: '6800',
         defaultPathSeparator: '/',
         httpRequestTimeout: 20000,
         globalStatStorageCapacity: 120,

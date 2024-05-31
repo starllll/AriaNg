@@ -194,11 +194,22 @@
 
         var initRpcSettingWithDefaultHostAndProtocol = function (setting) {
             setting.rpcHost = getDefaultRpcHost();
+            setting.rpcPort = getDefaultRpcPort();
 
             if (isInsecureProtocolDisabled()) {
                 setting.protocol = ariaNgConstants.defaultSecureProtocol;
             }
         };
+
+        var getDefaultRpcPort = function () {
+            var currentPort = $location.port();
+
+            if (currentPort) {
+                return currentPort;
+            }
+
+            return ariaNgConstants.defaultPort;
+        }
 
         var cloneRpcSetting = function (setting) {
             return {
